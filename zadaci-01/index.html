@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Zadatak 1.1</title>
+	<style>
+		#gore-lijevo {
+			text-align: left;
+			vertical-align: bottom;
+		}
+
+		#sredina-gore {
+			color: red;
+		}
+
+		#sredina-gore span {
+			text-decoration: underline;
+		}
+
+		#sredina-dole {
+			text-align: right;
+		}
+
+		#desno-dole {
+			text-align: right;
+			vertical-align: bottom;
+		}
+	</style>
+</head>
+<body>
+	<!-- tabela 9 x 8 -->
+	<table>
+		<tr>
+			<td id="gore-lijevo" colspan="2" rowspan="4" style="width: 30%;height: 30%;">
+				Текст поравнат уз доњу лијеву ивицу ћелије, у колони која заузима
+				30% ширине и 30% висине табеле.
+			</td>
+			<!--<td>Red 1, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td style="width: 10%;">Red 1, Kolona 3</td>
+			<td>Red 1, Kolona 4</td>
+			<td>Red 1, Kolona 5</td>
+			<td>Red 1, Kolona 6</td>
+			<td>Red 1, Kolona 7</td>
+			<td>Red 1, Kolona 8</td>
+		</tr>
+		<tr>
+			<!--<td>Red 2, Kolona 1</td>--><!--izbrisi citavu celiju, predstavlja visak-->
+			<!--<td>Red 2, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td colspan="3">Red 2, Kolona 3</td>
+			<!--<td>Red 2, Kolona 4</td>--><!--visak prilikom spajanja 3 kolone-->
+			<!--<td>Red 2, Kolona 5</td>--><!--visak prilikom spajanja 3 kolone-->
+			<td>Red 2, Kolona 6</td>
+			<td>Red 2, Kolona 7</td>
+			<td>Red 2, Kolona 8</td>
+		</tr>
+		<tr>
+			<!--<td>Red 3, Kolona 1</td>--><!--izbrisi citavu celiju, predstavlja visak-->
+			<!--<td>Red 3, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td rowspan="2">Red 3, Kolona 3</td>
+			<td rowspan="2">Red 3, Kolona 4</td>
+			<td id="sredina-gore" rowspan="2">Test obojen <span>crvenom</span> bojom</td>
+			<td rowspan="2">Red 3, Kolona 6</td>
+			<td rowspan="2">Red 3, Kolona 7</td>
+			<td rowspan="2">Red 3, Kolona 8</td>
+		</tr>
+		<tr>
+			<!--<td>Red 4, Kolona 1</td>--><!--izbrisi citavu celiju, predstavlja visak-->
+			<!--<td>Red 4, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<!--<td>Red 4, Kolona 3</td>--><!--visak celija nakon spajanja 2 reda-->
+			<!--<td>Red 4, Kolona 4</td>--><!--visak celija nakon spajanja 2 reda-->
+			<!--<td>Red 4, Kolona 5</td>--><!--visak celija nakon spajanja 2 reda-->
+			<!--<td>Red 4, Kolona 6</td>--><!--visak celija nakon spajanja 2 reda-->
+			<!--<td>Red 4, Kolona 7</td>--><!--visak celija nakon spajanja 2 reda-->
+			<!--<td>Red 4, Kolona 8</td>--><!--visak celija nakon spajanja 2 reda-->
+		</tr>
+		<tr>
+			<td colspan="2">Red 5, Kolona 1</td>
+			<!--<td>Red 5, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td>Red 5, Kolona 3</td>
+			<td>Red 5, Kolona 4</td>
+			<td colspan="4">Red 5, Kolona 5</td>
+			<!--<td>Red 5, Kolona 6</td>--><!--visak prilikom spajanja 4 kolone-->
+			<!--<td>Red 5, Kolona 7</td>--><!--visak prilikom spajanja 4 kolone-->
+			<!--<td>Red 5, Kolona 8</td>--><!--visak prilikom spajanja 4 kolone-->
+		</tr>
+		<tr>
+			<td colspan="2">Red 6, Kolona 1</td>
+			<!--<td>Red 6, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td colspan="2" rowspan="2">Red 6, Kolona 3</td>
+			<!--<td>Red 6, Kolona 4</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td>Red 6, Kolona 5</td>
+			<td>Red 6, Kolona 6</td>
+			<td>Red 6, Kolona 7</td>
+			<td>Red 6, Kolona 8</td>
+		</tr>
+		<tr>
+			<td colspan="2">Red 7, Kolona 1</td>
+			<!--<td>Red 7, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<!--<td colspan="2">Red 7, Kolona 3</td>--><!--visak spajanjem 6,3 i 7,3 redova-->
+			<!--<td>Red 7, Kolona 4</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td id="sredina-dole" colspan="2" rowspan="3">
+				Ненумерисана листа, поравната уз<br />десну ивицу:
+				<ul>
+					<li>ставка 1,</li>
+					<li><strong>ставка 2,</strong></li>
+					<li>ставка 3,</li>
+				</ul>
+			</td>
+			<!--<td>Red 7, Kolona 6</td>--><!--visak spajanjem kolona 7,5 i 7,6-->
+			<td>Red 7, Kolona 7</td>
+			<td>Red 7, Kolona 8</td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="2">
+				<p>У ову <em>ћелију</em> поставити произвољну слику.</p>
+				<div style="text-align: center;">
+					<img src="./slike/Scooter_in_Moscow_2000.jpg" alt="Група Scooter у Москви!"
+						width="250px" style="text-align: right;" />
+				</div>
+			</td>
+			<!--<td>Red 8, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<td rowspan="2">Red 8, Kolona 3</td>
+			<td rowspan="2">Red 8, Kolona 4</td>
+			<!--<td colspan="2">Red 8, Kolona 5</td>--><!--visak spajanjem 7.5, 8.5, 9.5 redova-->
+			<!--<td>Red 8, Kolona 6</td>--><!--visak spajanjem kolona 8,5 i 8,6-->
+			<td rowspan="2">Red 8, Kolona 7</td>
+			<td id="desno-dole" rowspan="2">
+				<a href="omiljenaknjiga.html">Линк ка другој страни >></a>
+			</td>
+		</tr>
+		<tr>
+			<!--<td colspan="2">Red 9, Kolona 1</td>--><!--visak celija nakon spajanja 2 reda-->
+			<!--<td>Red 9, Kolona 2</td>--><!--visak prilikom spajanja 2 kolone-->
+			<!--<td>Red 9, Kolona 3</td>--><!--visak spajanjem 8,3 i 9,3 redova-->
+			<!--<td>Red 9, Kolona 4</td>--><!--visak spajanjem 8,4 i 9,4 redova-->
+			<!--<td colspan="2">Red 9, Kolona 5</td>--><!--visak spajanjem 7.5, 8.5, 9.5 redova-->
+			<!--<td>Red 9, Kolona 6</td>--><!--visak spajanjem kolona 9,5 i 9,6-->
+			<!--<td>Red 9, Kolona 7</td>--><!--visak spajanjem po redovima 8,7 i 9,7-->
+			<!--<td>Red 9, Kolona 8</td>--><!--visak spajanjem po redovima 8,8 i 9,8-->
+		</tr>
+	</table>
+</body>
+</html>
