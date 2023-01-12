@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Događaji</title>
+</head>
+<body>
+    <!--Primjeri događaja:
+    
+        HTML stranica se učitala
+        HTML input polje je promijenjeno
+        HTML dugme je kliknuto itd.-->
+
+        <button onclick="document.getElementById('demo').innerHTML=Date()">Trenutno vrijeme</button>
+
+<p id="demo"></p>
+
+<p>Korištenje funkcija - prikaz trenutnog vremena</p>
+
+<button onclick="displayDate()">Trenutno vrijeme?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo1").innerHTML = Date();
+}
+</script>
+
+<!--
+Događaj	        Opis
+onchange	    An HTML element has been changed
+onclick	        The user clicks an HTML element
+onmouseover	    The user moves the mouse over an HTML element
+onmouseout	    The user moves the mouse away from an HTML element
+onkeydown	    The user pushes a keyboard key
+onload	        The browser has finished loading the page
+-->
+
+<p id="demo1"></p>
+
+<!--Tipovi podataka i njihove metode - w3schools i knjiga sa Matematičkog fakulteta u Beogradu -->
+</body>
+</html>

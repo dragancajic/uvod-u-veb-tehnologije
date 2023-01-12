@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježbe 10</title>
+</head>
+<body>
+    <!--If else iskazi / switch-->
+    <h2>JavaScript if</h2>
+
+<p>Prikazuje se "Dobar dan!" ako je trenutno manje od 18:00 časova</p>
+
+<p id="demo">Dobro veče!</p>
+
+<script>
+if (new Date().getHours() < 18) {
+  document.getElementById("demo").innerHTML = "Dobar dan!";
+}
+</script>
+
+<h2>JavaScript if .. else</h2>
+
+<p id="demo1"></p>
+
+<script>
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Dobro jutro!";
+} else if (time < 20) {
+  greeting = "Dobar dan!";
+} else {
+  greeting = "Dobro veče!";
+}
+document.getElementById("demo1").innerHTML = greeting;
+</script>
+
+<h2>JavaScript switch</h2>
+
+<p id="demo2"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Nedjelja";
+    break;
+  case 1:
+    day = "Ponedjeljak";
+    break;
+  case 2:
+    day = "Utorak";
+    break;
+  case 3:
+    day = "Srijeda";
+    break;
+  case 4:
+    day = "Četvrtak";
+    break;
+  case 5:
+    day = "Petak";
+    break;
+  case  6:
+    day = "Subota";
+}
+document.getElementById("demo2").innerHTML = "Danas je " + day;
+</script>
+
+<!--default, break - switch-->
+
+<h2>JavaScript switch</h2>
+
+<p id="demo3"></p>
+
+<script>
+let text;
+switch (new Date().getDay()) {
+  case 4:
+  case 5:
+    text = "Uskoro će vikend!";
+    break;
+  case 0:
+  case 6:
+    text = "Vikend je";
+    break;
+  default:
+    text = "Radujemo se vikendu";
+}
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+
+
+</body>
+</html>

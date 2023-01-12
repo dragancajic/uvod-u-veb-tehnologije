@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript promjenljive</h1>
+
+<p>Zadaci</p>
+<!--Uvod u JS, sintaksa, komentari, promjenljive, operatori, tipovi podataka
+Literatura: https://www.w3schools.com/js/js_intro.asp
+i https://matfuvit.github.io/UVIT/vezbe/knjiga/Poglavlja/JS/#41-izvr%C5%A1avanje-javascript-koda-->
+
+<p id="demo1"></p>
+<!--Zadatak 1: Ispisati obim i površinu pravougaonika čija je duža stranica 15cm, a kraća stranica 2.5cm-->
+<script>
+var a = 15;
+var b = 2.5;
+var p = a * b;
+var o = 2*a + 2*b;
+document.getElementById("demo1").innerHTML =
+</script>
+
+<!--Zadatak 2: Date su tri riječi zapisane kao niske: 'Ovo', 'je' i 'recenica'.
+   a. Spojiti date riječi u jednu rečenicu (nisku) sa razmacima između riječi i ispisati je u konzoli.
+   b. Ispisati u konzoli broj karaktera u rečenici.
+   c. Pronaći poziciju podniske 'recenica' u rečenici. Pronaći poziciju podniske 'nepostojeca niska'. 
+      Ispisati ove pozicije u konzoli.
+   d. Ispisati podnisku rečenice koja se nalazi na poziciji 7 do kraja niske.
+   e. Ispisati u konzoli novu rečenicu koja se dobija tako što se podniska 'recenica' zamijenjuje
+      podniskom 'nesto duza recenica'.
+   f. Ispisati u konzoli niske koje se dobijaju kada se sva slova u rečenici pretvore u velika, odnosno, mala slova.
+   g. Ispisati u konzoli rečenicu koja se dobija tako što se početnoj rečenici
+      dodaju karakteri bjelina na početak i kraj. 
+      Ispisati u konzoli rečenicu koja se dobija tako što se kreiranoj rečenici
+       ukidaju bjeline sa početka i kraja.
+   h. Ispisati u konzoli prvi i posljednji karakter rečenice.-->
+
+
+   <!--Rješenje:
+
+        const prva_rec = 'Ovo';
+const druga_rec = 'je';
+const treca_rec = 'recenica';
+
+// a
+const cela_recenica = prva_rec + ' ' + druga_rec + ' ' + treca_rec + '.';
+console.log(cela_recenica);
+
+// b
+const broj_karaktera = cela_recenica.length;
+console.log('Broj karaktera u recenici je', broj_karaktera);
+
+// c
+let pozicija = cela_recenica.indexOf('recenica');
+console.log('Pozicija niske "recenica" u recenici je:', pozicija);
+pozicija = cela_recenica.indexOf('nepostojeca niska');
+console.log('Pozicija niske "nepostojeca niska" u recenici je:', pozicija);
+
+// d
+const podniska = cela_recenica.slice(7, cela_recenica.length);
+console.log('Podniska recenice od indeksa 7 do kraja niske:', podniska);
+// Pogledati razlike izmedju slice, substr i substring za domaci
+
+// e
+const izmenjena_recenica = cela_recenica.replace(
+  'recenica',
+  'nesto duza recenica'
+);
+console.log(izmenjena_recenica);
+
+// f
+const sva_velika_slova = cela_recenica.toUpperCase();
+console.log(sva_velika_slova);
+const sva_mala_slova = cela_recenica.toLowerCase();
+console.log(sva_mala_slova);
+
+// g
+const recenica_sa_vodecim_belinama =
+  '  \n  \t    \n  \t\t\t   ' + cela_recenica + '   \n\n';
+console.log('Recenica sa vodecim belinama:', recenica_sa_vodecim_belinama);
+const osisana_recenica = recenica_sa_vodecim_belinama.trim();
+console.log('Osisana recenica:', osisana_recenica);
+
+// h
+const prvi_karakter = cela_recenica.charAt(0);
+const poslednji_karakter = cela_recenica.charAt(cela_recenica.length - 1);
+console.log(
+  'Prvi karakter je "' +
+    prvi_karakter +
+    '", a poslednji karakter je "' +
+    poslednji_karakter +
+    '"'
+);
+
+
+-->
+</body>
+</html>

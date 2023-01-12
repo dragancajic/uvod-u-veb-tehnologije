@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 4</title>
+		<script src="script.js"></script>
+	</head>
+	<body onload="init()">
+		<h1 id="user"></h1>
+		<h3>Novi unos</h3>
+		<form method="post" action="javascript:addItem()">
+			<label>Ime:</label>
+			<input autofocus="autofocus" type="text" required="required" name="firstName"/>
+			<br/>
+			<label>Prezime:</label>
+			<input type="text" required="required" name="lastName"/>
+			<br/>
+			<label>Ocjena</label>
+			<input type="number" required="required" name="grade" min=5 max=10/>
+			<br/>
+			<input type="submit" value="Dodaj"/>
+		</form>
+		
+		<div style="display: flex; flex-direction: row; margin-top:16px">
+			<button type="button" onclick="sort()">Sortiraj</button>
+			<button type="button" onclick="filter()">Prikaži samo one koji su položili</button>
+			<button type="button" onclick="saveData()">Sačuvaj sve</button>
+		</div>
+		
+		<h3>Sačuvani podaci</h3>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Ime</th>
+					<th>Prezime</th>
+					<th>Ocjena</th>
+				</tr>
+			</thead>
+			<tbody id="table-content">
+				
+			</tbody>
+		</table>
+		<p id="message"></p>
+		
+		<p>Preostalo vrijeme <span id="time">60</span>s.</p>
+	</body>
+</html>

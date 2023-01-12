@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 4</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+		<script src="script.js"></script>
+	</head>
+	<body onload="init()">
+	
+		<div class="jumbotron text-center"><h1 id="user"></h1></div>
+		
+		<div class="container">
+			<div class="col-lg-5 col-md-4">
+				<h3>Novi unos</h3>
+				<form method="post" action="javascript:addItem()">
+					<div class="form-group">
+						<label>Ime:</label>
+						<input autofocus="autofocus" type="text" required="required" name="firstName" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>Prezime:</label>
+						<input type="text" required="required" name="lastName" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>Ocjena</label>
+						<input type="number" required="required" name="grade" min=5 max=10 class="form-control"/>
+					</div>
+					<input type="submit" class="btn btn-primary" value="Dodaj"/>
+				</form>			
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<div class="row">
+					<button type="button" class="btn btn-default" onclick="sort()">Sortiraj</button>
+					<button type="button" class="btn btn-default" onclick="filter()">Prikaži samo one koji su položili</button>
+					<button type="button" class="btn btn-primary" onclick="saveData()">Sačuvaj sve</button>
+				</div>
+				<h3>Sačuvani podaci</h3>
+				<div class="table-responsive">    
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Ime</th>
+								<th>Prezime</th>
+								<th>Ocjena</th>
+							</tr>
+						</thead>
+						<tbody id="table-content">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>	
+		<br/>
+		<div class="container">
+			<div class="well well-sm">
+				<p id="message"></p>
+				<p>Preostalo vrijeme <span id="time">60</span>s.</p>
+			</div>
+		</div>
+			
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" id="progress" style="width: 100%">
+		  </div>
+		</div> 
+	</body>
+</html>
