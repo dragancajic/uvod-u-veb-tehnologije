@@ -20,7 +20,21 @@ document.getElementById("demo1").innerHTML = "Obim pravougaonika stranica" + a +
   ", a površina pravougaonika je " + p + ".";
 </script>
 
-<!--Zadatak 2: Date su tri riječi zapisane kao niske: 'Ovo', 'je' i 'recenica'.
+<!--
+  Zadatak 2: U konzoli ispisati jedan pseudo-slučajni broj iz intervala [0, 1) i jedan pseudo-slučajni broj
+  iz intervala [50, 150).
+  https://matfuvit.github.io/UVIT/vezbe/knjiga/Poglavlja/JS/
+
+let generisani_broj = Math.random();
+console.log('Generisani broj iz intervala [0, 1) je:', generisani_broj);
+generisani_broj = Math.floor(Math.random() * 100 + 50);
+console.log(
+  'Generisani broj iz celobrojnog intervala [50, 150) je:',
+  generisani_broj
+);
+-->
+
+<!--Zadatak 3: Date su tri riječi zapisane kao niske: 'Ovo', 'je' i 'recenica'.
    a. Spojiti date riječi u jednu rečenicu (nisku) sa razmacima između riječi i ispisati je u konzoli.
    b. Ispisati u konzoli broj karaktera u rečenici.
    c. Pronaći poziciju podniske 'recenica' u rečenici. Pronaći poziciju podniske 'nepostojeca niska'.
@@ -36,9 +50,9 @@ document.getElementById("demo1").innerHTML = "Obim pravougaonika stranica" + a +
    h. Ispisati u konzoli prvi i posljednji karakter rečenice.-->
 
 
-   <!--Rješenje:
+<!--Rješenje:
 
-        const prva_rec = 'Ovo';
+const prva_rec = 'Ovo';
 const druga_rec = 'je';
 const treca_rec = 'recenica';
 
@@ -91,8 +105,6 @@ console.log(
     poslednji_karakter +
     '"'
 );
-
-
 -->
 </body>
 </html>
