@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pseudoelementi</title>
+    <meta charset="UTF-8">
+
+    <style>
+        h1 {
+            font-family: sans-serif;
+            font-weight: normal;
+        }
+
+        h1::first-letter {
+            font-size: 60px;
+            font-family: serif;
+            font-style: italic;
+            font-weight: bolder;
+            color: palevioletred;
+        }
+
+        p {
+            width: 500px;
+        }
+
+        p::first-line {
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        div.teorema {
+            text-align: center;
+            width: 30%;
+            font-size: 18px;
+        }
+
+        div.teorema::before,
+        div.teorema::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 10px;
+            background-color: aquamarine;
+        }
+
+        div.dokaz {
+            width: 30%;
+            font-size: 14px;
+        }
+
+        div.dokaz::before {
+            content: "Dokaz:";
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        div.dokaz::after {
+            content: url('kraj-dokaza.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudoelementi ::first-letter i ::first-line</h1>
+
+    <p>
+        Korišćenjem pseudoelementa ::first-letter, omogućili smo na nivou
+        ovog dokumenta da se prvi karakter svih naslova prikazuje posebno,
+        što je vidljivo iz naslova iznad i ispod. Dodatno, korišćenjem
+        pseudoelementa ::first-line, omogućili smo na nivou ovog dokumenta
+        da se prva linija svih paragrafa prikazuje iskošeno i podvučeno,
+        što je vidljivo u primeru ovog paragrafa.
+    </p>
+
+    <h1>Pseudoelementi ::before i ::after</h1>
+
+    <div class="teorema">
+        Svaki Ojlerov graf je balansiran. Svaki povezan graf i balansiran graf je Ojlerov.
+    </div>
+
+    <div class="dokaz">
+        Neka nam je dat povezan balansiran graf. Da bismo pokazali da graf sadrži Ojlerov ciklus, postavićemo mrava na
+        bilo koji od čvorova tog grafa. Zašto baš mrav? Poznato je da mravi nikada ne idu istim putem dva puta pa smo
+        sigurni da će naš mrav proći svaku granu tačno jednom.
+        <br><br>
+        Puštamo mrava da slučajno odabira grane kojima će se kretati. Ako je veoma pametan, obići će svaku granu jednom
+        i vratiće se u početni čvor. Medutim, velike su šanse da nije veoma pametan i da će se u nekom čvoru zaglaviti,
+        odnosno, neće imati granu koju već nije obišao.
+        <br><br>
+        Da li mrav može da se zaglavi u bilo kom čvoru? Ispostavlja se da može da se zaglavi samo u početnom čvoru (jer
+        je graf balansiran). U trenutku kada se zaglavio on je napravio ciklus. Samo, taj ciklus nije Ojlerov jer još
+        uvek nije obišao sve grane. Ideja je da odabere drugačiji početni čvor iz kog će krenuti obilazak. Koji čvor će
+        izabrati? Treba da izabere čvor iz ciklusa koji ima izlaznih grana koje još uvek nije obišao.
+        <br><br>
+        Sada, mrav pokušava ispočetka iz novog čvora. Prvo obilazi ciklus koji je već pronašao u prethodnom pokušaju, a
+        zatim nastavlja obilazak preko neposećenih grana. Na taj način, ciklus se uvećava dok se ne dode do Ojlerovog.
+        Ukoliko se ponovo zaglavi, ponovo bira novi početni čvor, obilazi pronadeni ciklus (koji i dalje nije Ojlerov) i
+        tako sve dok ne uspe da obide sve grane.
+    </div>
+</body>
+
+</html>
