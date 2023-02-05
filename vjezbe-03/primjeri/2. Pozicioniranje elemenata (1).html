@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozicioniranje elemenata (drugi dio)</title>
+    <style>
+        #omotac {
+            margin-top: 100px;
+            height: 400px;
+            width: 400px;
+            background-color: rgba(218, 165, 32, 0.5);
+        }
+    
+        #prvi {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(231, 43, 103);
+        }
+
+        #drugi {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(24, 243, 232);
+            position: absolute;
+            top: 30px;
+            left: 80px;
+        }
+
+        #treci {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(180, 55, 252);
+        }
+    </style>
+</head>
+<body>
+     <!--Apsolutno pozicioniranje
+Apsolutno pozicioniranje je najzahtjevnije za razumijevanje od svih tipova pozicioniranja.
+Pri apsolutnom pozicioniranju “ivica” od koje se element pomjera je ivica prvog pretka
+tog elementa u DOM stablu koji nije statički pozicioniran.
+Ukoliko ne postoji predak koji zadovoljava taj uslov, onda se za “ivicu” smatra ivica
+elementa body.
+
+U skladu sa ovom složenom definicijom postoje dva slučaja koja možemo razmatrati.
+Prvi slučaj je kada su svi preci elementa koji je apsolutno pozicioniran statički pozicionirani.
+U tom slučaju, element se pomjera od ivice elementa body. Takav slučaj je predstavljen
+narednim kodom. Jedini predak (do elementa body) drugog div elementa je element 
+div koji ima postavljen identifikator na vrijednost omotac 
+(nazovimo ovaj element “omotač”). Bez obzira što se drugi div element nalazi
+kao potomak omotača, s obzirom da je omotač statički pozicioniran, onda će drugi
+div element biti pozicioniran u odnosu na ivicu body elementa.-->
+
+<div id="omotac">
+    <div id="prvi"></div>
+    <div id="drugi"></div>
+    <div id="treci"></div>
+</div>
+
+
+<!--Međutim, šta ukoliko bi omotač bio nestatički pozicioniran?
+ Ukoliko postavimo da omotač bude, na primjer, relativno pozicioniran (pogledati
+ kod ispod) imaćemo situaciju kao na slici (u pretraživaču).
+Sada drugi div element nije više pozicioniran u odnosu na ivicu body elementa
+zato što postoji makar jedan predak koji nije statički pozicioniran (a to je omotač), 
+te se drugi div element pozicionira u odnosu na njegovu ivicu.-->
+
+<!--Kod
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primjer</title>
+    <meta charset="UTF-8">
+
+    <style>
+        #omotac {
+            position: relative;
+            margin-top: 100px;
+            height: 400px;
+            width: 400px;
+            background-color: rgba(218, 165, 32, 0.5);
+        }
+    
+        #prvi {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(231, 43, 103);
+        }
+
+        #drugi {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(24, 243, 232);
+            position: absolute;
+            top: 30px;
+            left: 80px;
+        }
+
+        #treci {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(180, 55, 252);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="omotac">
+        <div id="prvi"></div>
+        <div id="drugi"></div>
+        <div id="treci"></div>
+    </div>
+</body>
+
+</html>
+-->
+</body>
+</html>

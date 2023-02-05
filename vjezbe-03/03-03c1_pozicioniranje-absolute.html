@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>absolute | Pozicioniranje elemenata</title>
+	<style>
+		#omotac {
+			margin-top: 100px;
+			height: 400px;
+			width: 400px;
+			background-color: rgb(218, 165, 32, 0.5);
+		}
+
+		#prvi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(231, 43, 102);
+		}
+
+		#drugi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(24, 243, 232);
+			position: absolute;
+			top: 30px; /* pozicioniranje u odnosu na gornji, lijevo vrh, */
+			left: 80px;/* tj. tijelo dokumenta, tj. nema praznog prostora */
+			/*  1. varijanta:
+				Trazi element predak PRVI koji nije staticki pozicioniran!
+			*/
+		}
+
+		#treci {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(180, 55, 252);
+		}
+	</style>
+</head>
+<body>
+	<div id="omotac">
+		<div id="prvi">Prvi div element</div>
+		<div id="drugi">Drugi div element</div>
+		<div id="treci">Treci div element</div>
+		<p>Omotac svih div elemenata</p>
+	</div>
+</body>
+</html>

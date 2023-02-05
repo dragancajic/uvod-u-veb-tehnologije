@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozicioniranje elemenata (treći dio) </title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        #omotac {
+            position: relative;
+            margin-top: 100px;
+            height: 400px;
+            width: 400px;
+            background-color: rgba(218, 165, 32, 0.5);
+        }
+    
+        #prvi {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(231, 43, 103);
+        }
+
+        #drugi {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(24, 243, 232);
+            position: fixed;
+            top: 30px;
+            right: 0;
+        }
+
+        #treci {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(180, 55, 252);
+        }
+
+        
+        #prvi1 {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(231, 43, 103);
+        }
+
+        #drugi1 {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(24, 243, 232);
+            position: relative;
+            top: 30px;
+            left: 80px;
+            z-index: -5;
+        }
+
+        #treci1 {
+            height: 100px;
+            width: 300px;
+            background-color: rgb(180, 55, 252);
+        }
+    
+    </style>
+
+</head>
+<body>
+    <!--Fiksno pozicioniranje
+Pri fiksnom pozicioniranju “ivica” od koje se element pomjera je ivica pogleda
+veb pregledača. Međutim, za fiksno pozicioniranje važi još jedno pravilo po čemu
+se on razlikuje od ostalih pozicioniranja. Element sa fiksnim pozicioniranjem se 
+nalaze na istoj poziciji na ekranu, čak i kada se stranica skroluje.
+
+Slično kao u slučaju apsolutnog pozicioniranja, elementi sa fiksnim pozicioniranjem
+se izbacuju iz normalnog toka, tj. ne ostaju “prazne” površine tamo gdje bi se 
+element našao pri statičkom pozicioniranju.-->
+
+<div id="omotac">
+    <div id="prvi"></div>
+    <div id="drugi"></div>
+    <div id="treci"></div>
+</div>
+
+<br>
+<br>
+
+<!--Z-pozicioniranje elemenata
+Prilikom pozicioniranja elemenata, može se desiti da se neki od njih preklope.
+Postavlja se pitanje na koji način će ti elementi biti prikazani, tj. koji element
+će biti ispred kog elementa.
+
+U skladu sa koordinatnim sistemom, elementu može biti dodijeljena pozitivna ili negativna
+vrijednost za z-dubinu (engl. z-depth). 
+Element koji ima veću vrijednost z-dubine biće pozicioniran ispred elemenata sa manjom vrijednošću za z-dubinu. 
+Ukoliko se dva elementa sa jednakim vrijednostima za z-dubinu preklope, onda će onaj element koji je poslednji 
+pozicioniran biti ispred ostalih elemenata sa kojima se preklapa.-->
+
+<div id="prvi1"></div>
+<div id="drugi1"></div>
+<div id="treci1"></div>
+
+<!-- Svojstva display i visibility
+Skripta: https://matfuvit.github.io/UVIT/vezbe/knjiga/Poglavlja/CSS/-->
+    
+</body>
+</html>

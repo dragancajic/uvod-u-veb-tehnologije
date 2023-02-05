@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>relative | Pozicioniranje elemenata</title>
+	<style>
+		#prvi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(231, 43, 102);
+		}
+
+		#drugi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(24, 243, 232);
+			position: relative;
+			top: 30px; /* MANA: stvara se prazni prostor, na mjestu */
+			left: 80px;/* gdje se pomjereni element nalazi. */
+		}
+
+		#treci {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(180, 55, 252);
+		}
+	</style>
+</head>
+<body>
+	<div id="prvi">Prvi div element</div>
+	<div id="drugi">Drugi div element</div>
+	<div id="treci">Treci div element</div>
+</body>
+</html>

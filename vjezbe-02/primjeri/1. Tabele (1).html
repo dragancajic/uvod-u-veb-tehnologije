@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ivice tabele | Milica</title>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-radius: 20px;
+			border-color: #36c413;
+			padding: 15px;
+			border-spacing: 5px;
+			background-color: #d5e7e7;
+		}
+	</style>
+</head>
+<body>
+	<h2>Tabela sa ivicama</h2>
+	
+	<table style="width:20%">
+		<caption>Naziv tabele</caption>
+		<tr>
+			<th>Ime</th>
+			<th>Prezime</th> 
+			<th>Godine</th>
+		</tr>
+		<tr>
+			<td>Jovan</td>
+			<td>Janković</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>Ivana</td>
+			<td>Popović</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>Marko</td>
+			<td>Jovanović</td>
+			<td>27</td>
+		</tr>
+	</table>
+<!--
+	U nastavku su dodatne osobine koje mogu da imaju ivice tabele.
+	Za veličinu kolona i vrsta koristimo atribute width i height.
+
+	Ukoliko želimo da obojimo unutrašnjost tabele, odnosno da postavimo pozadinu za ćelije
+	tabele koristimo kod ispod.
+	collapse se koristi kada želimo da izbjegnemo dupliranje ivica kao u prethodnom primjeru.
+
+	<style>
+		table, th, td {
+			border: 1px solid white;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			background-color: #96D4D4;
+		}
+	</style>
+
+	Ukoliko želimo da ivice budu okrugle koristimo sljedeći kod:
+
+	<style>		
+		table, th, td {
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+	</style>
+	
+	Ukoliko želimo da izbjegnemo okvir oko table koristimo sljedeći kod:
+
+	<style>
+		th, td {
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+	</style>
+
+	Ukoliko želimo da ivice budu tačkaste ili nekog drugog oblika koristimo:
+
+	<style>
+		th, td {
+			border-style: dotted;
+		}
+	</style>
+
+	Umjesto dotted može i:
+		dotted
+		dashed
+		solid
+		double
+		groove
+		ridge
+		inset
+		outset
+		none
+		hidden
+-->
+</body>
+</html>
