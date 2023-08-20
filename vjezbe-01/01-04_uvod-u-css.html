@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./style.css"><!-- 3.) CSS eksterni fajl -->
-	<title>Uvod u CSS</title>
+
+	<!-- 3.) stilovi u zasebnom fajlu / External CSS -->
+	<link rel="stylesheet" href="./style.css">
+	<title>01-04 Uvod u CSS</title>
 	
-	<!-- 1.) stilovi u head elementu -->
+	<!-- 2.) stilovi u head elementu / Internal CSS -->
 	<style>
 		body {
 			background-color: lightblue;
@@ -23,14 +25,22 @@
 			color: black;
 			font-size: 14pt;
 		}
-
 	</style>
 </head>
 <body>
 	<h1>Naslov</h1>
-	<!-- 2.) CSS stilovi inline-->
+
+	<!-- 1.) stilovi u liniji / Inline CSS -->
 	<h2 style="color: rgb(255, 255, 255);">Podnaslov</h2><!-- bijela boja -->
 	<p>tekst stranice</p>
-	<p style="border:3px solid black; text-align:center; color: rgb(0, 0, 0);">p a r a g r a f</p><!--crna-->
+	<!--
+		| • CRNA rgb(0, 0, 0)         |
+		| • CRVENA rgb(255, 0, 0)     |
+		| • ZUTA rbg(255, 255, 0)     |
+		| • BIJELA rgb(255, 255, 255) |
+	-->
+	<p style="border: 3px solid black; text-align: center; color: rgb(0, 0, 0);">
+		p a r a g r a f
+	</p>
 </body>
 </html>
