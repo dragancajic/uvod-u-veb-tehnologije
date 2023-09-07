@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vježbe 10: Petlje</title>
+</head>
+<body>
+	<!-- `For` petlja -->
+	<h2>JavaScript For</h2>
+	<p id="demoo"></p>
+	<script>
+		const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+		let text = "";
+
+		for (let i = 0; i < cars.length; i++) {
+			text += "<code>" + cars[i] + "</code>" + "<br>";
+		}
+		document.getElementById("demoo").innerHTML = text;
+	</script>
+
+	<!-- `For In` petlja -->
+	<h2>JavaScript For In</h2>
+	<p id="demo"></p>
+	<script>
+		const numbers = [45, 4, 9, 16, 25];
+		let txt1 = "";
+
+		for (let x in numbers) {
+			txt1 += "<strong>" + numbers[x] + "</strong>" + "<br>";
+		}
+		document.getElementById("demo").innerHTML = txt1;
+	</script>
+
+	<h2>JavaScript Array.forEach()</h2>
+	<p id="demo1"></p>
+	<script>
+		const brojevi = [50, 8, 10, 6, 21];
+		let txt = "";
+
+		// Performs the specified action for each element in an array.
+		brojevi.forEach(myFunction);
+		document.getElementById("demo1").innerHTML = txt;
+
+		function myFunction(value, index, array) {
+			txt += "<mark>" + value + "</mark>" + "<br>";
+		}
+	</script>
+
+	<!-- `For Of` petlja -->
+	<h2>JavaScript For Of</h2>
+	<p id="demo3"></p>
+	<script>
+		const language = "JavaScript";
+		let text2 = "";
+
+		for (let x of language) {
+			text2 += x + "<sup>2</sup>" + "<br>";
+		}
+		document.getElementById("demo3").innerHTML = text2;
+	</script>
+
+	<!-- `While` petlja -->
+	<h2>JavaScript While</h2>
+	<p id="demo4"></p>
+	<script>
+		let text4 = "";
+
+		let i = 0;
+		while (i < 10) {
+			text4 += "<br>Broj: " + "<em>" + i + "</em>";
+			i++;
+		}
+		document.getElementById("demo4").innerHTML = text4;
+	</script>
+
+	<!-- `Do While` petlja -->
+	<h2>JavaScript Do While</h2>
+	<p id="demo5"></p>
+	<script>
+		let text5 = ""
+
+		let j = 0;
+		do {
+			text5 += "<br>Broj: " + "<del>" + j + "</del>";
+			j++;
+		}
+		while (j < 10);
+		document.getElementById("demo5").innerHTML = text5;
+	</script>
+</body>
+</html>
