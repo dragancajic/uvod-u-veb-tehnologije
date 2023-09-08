@@ -4,35 +4,50 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>02-01a Tabele • Dragan</title>
-    <style>
-        table, td {
-            border: 1px solid black;
-        }
-    </style>
+	<title>02-01a HTML[5] Tabele • Dragan</title>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+
+		table {
+			width: 50%;
+		}
+	</style>
 </head>
 <body>
+	<!--
+		DOBRA PRAKSA: razdvojiti tabelu na zaglavlje i tijelo tabele.
+		- Kako?
+		- Pa, uvodeci (pod)elemente <thead> i <tbody> unutar <table> elementa.
+		  U <thead> cemo smjestiti celije koje se ticu zaglavlja tabele, a
+		  u <tbody> cemo smjestiti konkretan sadrzaj - tabelarne podatke. ;-)
+	-->
 	<table>
-		<tr>
-			<th>Studijski program</th>
-			<th>Smjer</th>
-			<th>Ime i prezime</th>
-		</tr>
-		<tr>
-			<td>Matematika i informatika</td>
-			<td>Informatika</td>
-			<td>Dragan Ćajić</td>
-		</tr>
-        <tr>
-			<td>Matematika i informatika</td>
-			<td>Opšti</td>
-			<td>Marko Marković</td>
-		</tr>
-		<tr>
-			<td>Matematika i informatika</td>
-			<td>Nastavni</td>
-			<td>Marija Jokić</td>
-		</tr>
+		<thead>
+			<tr>
+				<th>Studijski program</th>
+				<th>Smjer</th>
+				<th>Ime i prezime</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Matematika i informatika</td>
+				<td>Informatika</td>
+				<td>Dragan Ćajić</td>
+			</tr>
+			<tr>
+				<td>Matematika i informatika</td>
+				<td>Opšti</td>
+				<td>Marko Marković</td>
+			</tr>
+			<tr>
+				<td>Matematika i informatika</td>
+				<td>Nastavni</td>
+				<td>Marija Jokić</td>
+			</tr>
+		</tbody>
 	</table>
 </body>
 </html>

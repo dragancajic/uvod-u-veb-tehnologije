@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>02-01b Tabele s ivicama</title>
-    <style>
-        table, td {
-            border: 1px solid black;
-            border-radius: 20px;
-            border-color: #36c413;
-            background-color: #d5ffff;
-            text-align: center;
-            padding: 5px;
-            border-spacing: 15px;
-            
-        }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>02-01b Tabele s ivicama</title>
+	<style>
+		table, th, td {
+			/*border: 1px solid black;*/
+			/*border-radius: 20px;*/
+			/*border-color: #36c413;*/
+			text-align: center;
+			padding: 15px;
+			background-color: #d5ffff;
+		}
 
-        th {
-            background-color: #d5e7e7;
-            /*text-align: center;*/
-            padding: 10px;
-        }
-    </style>
+		th {
+			background-color: #d5a7a7;
+			/*text-align: center;*/
+			padding: 20px;
+		}
+
+		th, td {
+			width:  30%;
+			height: 50px;
+			border: 2px solid black;
+			border-spacing: 15px;
+			border-radius: 30px;
+			border-collapse: collapse; /* default value: `separate` */
+			border-style: solid;
+		}
+
+		td {
+			background-color: tomato;
+		}
+
+		caption {
+			padding: 5px;
+			margin: 10px;
+		}
+	</style>
 </head>
 <body>
-    <table>
-		<tr>
-			<th>Studijski program</th>
-			<th>Smjer</th>
-			<th>Ime i prezime</th>
-		</tr>
-		<tr>
-			<td>Matematika i informatika</td>
-			<td>Informatika</td>
-			<td>Dragan Ćajić</td>
-		</tr>
-        <tr>
-			<td>Matematika i informatika</td>
-			<td>Opšti</td>
-			<td>Marko Marković</td>
-		</tr>
-		<tr>
-			<td>Matematika i informatika</td>
-			<td>Nastavni</td>
-			<td>Marija Jokić</td>
-		</tr>
+	<h2>Spisak studenata po studijskom programu i smjeru</h2>
+	<table>
+		<caption>Tabela: Spisak studenata</caption>
+		<thead>
+			<tr>
+				<th>Studijski program</th>
+				<th>Smjer</th>
+				<th>Ime i prezime</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Matematika i informatika</td>
+				<td>Informatika</td>
+				<td>Dragan Ćajić</td>
+			</tr>
+			<tr>
+				<td>Matematika i informatika</td>
+				<td>Opšti</td>
+				<td>Marko Marković</td>
+			</tr>
+			<tr>
+				<td>Matematika i informatika</td>
+				<td>Nastavni</td>
+				<td>Marija Jokić</td>
+			</tr>
+		</tbody>
 	</table>
 </body>
 </html>
