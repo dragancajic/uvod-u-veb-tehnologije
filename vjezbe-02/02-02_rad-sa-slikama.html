@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>02-02 Rad sa slikama</title>
-    <style>
-        img {
-            border-radius: 20px;
-        }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>02-02 Rad sa slikama</title>
+	<style>
+		div {
+			padding: 10px;
+			margin: 5px;
+		}
 
-        div {
-            width: 45%;
-        }
-    </style>
+		#prvi > img { /* `gadjaj samo slike u prvom div-u :-) */
+			border-radius: 50%;
+			width: auto;
+		}
+
+		#drugi {
+			width: 45%;
+		}
+
+		img {
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
 </head>
 <body>
-    <!-- PREPORUKA: napraviti folder za slike -->
-    <img src="./images/little-bird.jpg" alt="Little Bird" />
-    <img src="./images/little-bird.jpg" alt="Little Bird" />
-    <img src="./images/little-bird.jpg" alt="Little Bird" />
-    <img src="./images/little-bird.jpg" alt="Little Bird" />
-    <img src="./images/little-bird.jpg" alt="Little Bird" />
-
-    <div>
-        <p>
-            <img src="./images/little-bird.jpg" alt="Little Bird" />
-            Чарлс Дарвин је проучавао вресте зеба на острву Галапагос.
-        </p>
-        <hr />
-        <p>
-            Чарлс Дарвин је проучавао вресте зеба на острву Галапагос.
-            <img src="./images/little-bird.jpg" alt="Little Bird" /></p>
-    </div>
+	<!-- PREPORUKA: napraviti folder za slike -->
+	<div id="prvi">
+		<img src="./images/little-bird.jpg" alt="Little Bird" />
+		<img src="./images/little-bird.jpg" alt="Little Bird" />
+		<img src="./images/little-bird.jpg" alt="Little Bird" />
+		<img src="./images/little-bird.jpg" alt="Little Bird" />
+		<img src="./images/little-bird.jpg" alt="Little Bird" />
+	</div>
+	<div id="drugi">
+		<p>
+			<img src="./images/little-bird.jpg" alt="Little Bird" style="float:  left;" />
+			Чарлс Дарвин je проучавао врсте зеба на острву Галапагос.
+		</p>
+		<hr />
+		<p>
+			Чарлс Дарвин je проучавао врсте зеба на острву Галапагос.
+			<img src="./images/little-bird.jpg" alt="Little Bird"
+				style="vertical-align: middle; float: right;" />
+		</p>
+	</div>
 </body>
 </html>
