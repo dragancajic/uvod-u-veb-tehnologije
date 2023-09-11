@@ -1,120 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pozicioniranje elemenata (drugi dio)</title>
-    <style>
-        #omotac {
-            margin-top: 100px;
-            height: 400px;
-            width: 400px;
-            background-color: rgba(218, 165, 32, 0.5);
-        }
-    
-        #prvi {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(231, 43, 103);
-        }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pozicioniranje elemenata (I dio) • Milica</title>
+	<!--
+	Za određivanje tipa pozicioniranja koristi se svojstvo `position`.
 
-        #drugi {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(24, 243, 232);
-            position: absolute;
-            top: 30px;
-            left: 80px;
-        }
+	Moguće vrijednosti ovog svojstva su: `static`, `relative`, `absolute` i `fixed`.
 
-        #treci {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(180, 55, 252);
-        }
-    </style>
+	Sa druge strane, za definisanje precizne pozicije elementa koriste se neka od
+	svojstava: `top`, `right`, `bottom` i `left`.
+	-->
+	<!--
+	1. Statičko pozicioniranje
+	
+	Ovo je podrazumijevan način pozicioniranja elemenata.
+
+	Postavljanje vrijednosti za neko od svojstava `top`, `right`, `bottom` ili `left`
+	nema uticaja na poziciju elementa sa statičkim pozicioniranjem! <-- LOOK! :eyes:
+	
+	Elementi se ređaju na stranici jedan nakon drugog, u skladu sa njihovim dimenzijama
+	i drugim karakteristikama. Na primjer,
+
+	$ `linijski elementi` ređaju se jedan pored drugog,
+	  dok se
+	$ `blokovski elementi` ređaju jedan ispod drugog.
+
+	Ovaj tok ređanja elemenata se naziva uobicajeni / prirodni / normalni tok (engl. `normal flow`).
+	-->
+	<style>
+		#prvi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(231, 43, 103);
+		}
+
+		#drugi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(24, 243, 232);
+			position: static;
+			top: 30px;
+			left: 80px;
+		}
+
+		#treci {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(180, 55, 252);
+		}
+
+		#prvi1 {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(231, 43, 103);
+		}
+
+		#drugi1 {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(24, 243, 232);
+			position: relative;
+			top: 30px;
+			left: 80px;
+		}
+
+		#treci1 {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(180, 55, 252);
+		}
+	</style>
 </head>
 <body>
-     <!--Apsolutno pozicioniranje
-Apsolutno pozicioniranje je najzahtjevnije za razumijevanje od svih tipova pozicioniranja.
-Pri apsolutnom pozicioniranju “ivica” od koje se element pomjera je ivica prvog pretka
-tog elementa u DOM stablu koji nije statički pozicioniran.
-Ukoliko ne postoji predak koji zadovoljava taj uslov, onda se za “ivicu” smatra ivica
-elementa body.
+	<div id="prvi"></div>
+	<div id="drugi"></div>
+	<div id="treci"></div>
+	<br>
+	<br>
+	<!--
+	2. Relativno pozicioniranje
+	
+	Svaki tip pozicioniranja definiše šta za taj tip znači “ivica” u odnosu na koju se element
+	pomjera. Pri relativnom pozicioniranju “ivica” od koje se element pomjera je ivica tog elementa,
+	pri statičkom pozicioniranju. Jednostavnije rečeno, postavljanje vrijednosti za svojstva
+	`top`, `right`, `bottom` i `left` pomjeriće element u odnosu na njegovu statičku poziciju. LOOK!
 
-U skladu sa ovom složenom definicijom postoje dva slučaja koja možemo razmatrati.
-Prvi slučaj je kada su svi preci elementa koji je apsolutno pozicioniran statički pozicionirani.
-U tom slučaju, element se pomjera od ivice elementa body. Takav slučaj je predstavljen
-narednim kodom. Jedini predak (do elementa body) drugog div elementa je element 
-div koji ima postavljen identifikator na vrijednost omotac 
-(nazovimo ovaj element “omotač”). Bez obzira što se drugi div element nalazi
-kao potomak omotača, s obzirom da je omotač statički pozicioniran, onda će drugi
-div element biti pozicioniran u odnosu na ivicu body elementa.-->
-
-<div id="omotac">
-    <div id="prvi"></div>
-    <div id="drugi"></div>
-    <div id="treci"></div>
-</div>
-
-
-<!--Međutim, šta ukoliko bi omotač bio nestatički pozicioniran?
- Ukoliko postavimo da omotač bude, na primjer, relativno pozicioniran (pogledati
- kod ispod) imaćemo situaciju kao na slici (u pretraživaču).
-Sada drugi div element nije više pozicioniran u odnosu na ivicu body elementa
-zato što postoji makar jedan predak koji nije statički pozicioniran (a to je omotač), 
-te se drugi div element pozicionira u odnosu na njegovu ivicu.-->
-
-<!--Kod
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Primjer</title>
-    <meta charset="UTF-8">
-
-    <style>
-        #omotac {
-            position: relative;
-            margin-top: 100px;
-            height: 400px;
-            width: 400px;
-            background-color: rgba(218, 165, 32, 0.5);
-        }
-    
-        #prvi {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(231, 43, 103);
-        }
-
-        #drugi {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(24, 243, 232);
-            position: absolute;
-            top: 30px;
-            left: 80px;
-        }
-
-        #treci {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(180, 55, 252);
-        }
-    </style>
-</head>
-
-<body>
-    <div id="omotac">
-        <div id="prvi"></div>
-        <div id="drugi"></div>
-        <div id="treci"></div>
-    </div>
-</body>
-
-</html>
--->
+	Važno je zapamtiti da izmjene u poziciji elementa koji je relativno pozicioniran nemaju uticaja
+	na preostali sadržaj stranice - svi ostali elementi ostaju na svojim pozicijama. Posljedica ovog
+	efekta jeste pojavljivanje “prazne” površine na mjestu gdje se relativno-pozicionirani pomjereni
+	element nalazio prije pomjeranja.
+	-->
+	<div id="prvi1"></div>
+	<div id="drugi1"></div>
+	<div id="treci1"></div>
+	<br>
+	<br>
 </body>
 </html>

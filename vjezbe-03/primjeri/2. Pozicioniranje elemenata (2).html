@@ -1,107 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pozicioniranje elemenata (treći dio) </title>
-    <style>
-        body {
-            height: 3000px;
-        }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pozicioniranje elemenata (II dio) • Milica</title>
+	<style>
+		#omotac {
+			margin-top: 100px;
+			height: 400px;
+			width: 400px;
+			background-color: rgba(218, 165, 32, 0.5);
+		}
+	
+		#prvi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(231, 43, 103);
+		}
 
-        #omotac {
-            position: relative;
-            margin-top: 100px;
-            height: 400px;
-            width: 400px;
-            background-color: rgba(218, 165, 32, 0.5);
-        }
-    
-        #prvi {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(231, 43, 103);
-        }
+		#drugi {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(24, 243, 232);
+			position: absolute;
+			top: 30px;
+			left: 80px;
+		}
 
-        #drugi {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(24, 243, 232);
-            position: fixed;
-            top: 30px;
-            right: 0;
-        }
-
-        #treci {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(180, 55, 252);
-        }
-
-        
-        #prvi1 {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(231, 43, 103);
-        }
-
-        #drugi1 {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(24, 243, 232);
-            position: relative;
-            top: 30px;
-            left: 80px;
-            z-index: -5;
-        }
-
-        #treci1 {
-            height: 100px;
-            width: 300px;
-            background-color: rgb(180, 55, 252);
-        }
-    
-    </style>
-
+		#treci {
+			height: 100px;
+			width: 300px;
+			background-color: rgb(180, 55, 252);
+		}
+	</style>
 </head>
 <body>
-    <!--Fiksno pozicioniranje
-Pri fiksnom pozicioniranju “ivica” od koje se element pomjera je ivica pogleda
-veb pregledača. Međutim, za fiksno pozicioniranje važi još jedno pravilo po čemu
-se on razlikuje od ostalih pozicioniranja. Element sa fiksnim pozicioniranjem se 
-nalaze na istoj poziciji na ekranu, čak i kada se stranica skroluje.
+	<!--
+	3. Apsolutno pozicioniranje
 
-Slično kao u slučaju apsolutnog pozicioniranja, elementi sa fiksnim pozicioniranjem
-se izbacuju iz normalnog toka, tj. ne ostaju “prazne” površine tamo gdje bi se 
-element našao pri statičkom pozicioniranju.-->
+	Apsolutno pozicioniranje je najzahtjevnije za razumijevanje od svih tipova pozicioniranja.
 
-<div id="omotac">
-    <div id="prvi"></div>
-    <div id="drugi"></div>
-    <div id="treci"></div>
-</div>
+	Pri apsolutnom pozicioniranju, “ivica” od koje se element pomjera je ivica prvog pretka
+	tog elementa u DOM stablu koji nije statički pozicioniran! <-- LOOK! :eyes:
+	Ukoliko ne postoji predak koji zadovoljava taj uslov, onda se za “ivicu” smatra ivica
+	elementa `body`.
 
-<br>
-<br>
+	U skladu sa ovom složenom definicijom postoje dva slučaja koja možemo razmatrati.
 
-<!--Z-pozicioniranje elemenata
-Prilikom pozicioniranja elemenata, može se desiti da se neki od njih preklope.
-Postavlja se pitanje na koji način će ti elementi biti prikazani, tj. koji element
-će biti ispred kog elementa.
+	Prvi slučaj je kada su svi preci elementa koji je apsolutno pozicioniran statički pozicionirani.
+	U tom slučaju, element se pomjera od ivice elementa `body`.
+	
+	Takav slučaj je predstavljen narednim kodom.
+	
+	Jedini predak (do elementa `body`) drugog `div` elementa je element `div` koji ima postavljen
+	identifikator na vrijednost `omotac` (nazovimo ovaj element “omotač”). Bez obzira što se drugi
+	`div` element nalazi kao potomak `omotača`, s obzirom da je `omotač` statički pozicioniran,
+	onda će drugi `div` element biti pozicioniran u odnosu na ivicu `body` elementa. <-- LOOK!
+	-->
+	<div id="omotac">
+		<div id="prvi"></div>
+		<div id="drugi"></div>
+		<div id="treci"></div>
+	</div>
+	<!--
+	Međutim, šta ukoliko bi `omotač` bio nestatički pozicioniran?
+	
+	Ukoliko postavimo da `omotač` bude, na primjer, relativno pozicioniran (pogledati kôd ispod)
+	imaćemo situaciju kao na slici (u pretraživaču).
 
-U skladu sa koordinatnim sistemom, elementu može biti dodijeljena pozitivna ili negativna
-vrijednost za z-dubinu (engl. z-depth). 
-Element koji ima veću vrijednost z-dubine biće pozicioniran ispred elemenata sa manjom vrijednošću za z-dubinu. 
-Ukoliko se dva elementa sa jednakim vrijednostima za z-dubinu preklope, onda će onaj element koji je poslednji 
-pozicioniran biti ispred ostalih elemenata sa kojima se preklapa.-->
+	Sada drugi `div` element nije više pozicioniran u odnosu na ivicu `body` elementa zato što
+	postoji makar jedan predak koji nije statički pozicioniran (a to je `omotač`), te se drugi
+	`div` element pozicionira u odnosu na njegovu ivicu.
 
-<div id="prvi1"></div>
-<div id="drugi1"></div>
-<div id="treci1"></div>
-
-<!-- Svojstva display i visibility
-Skripta: https://matfuvit.github.io/UVIT/vezbe/knjiga/Poglavlja/CSS/-->
-    
+	[pogledaj HTML dokument -> `2b Nestaticki omotac.html`]
+	-->
 </body>
 </html>
