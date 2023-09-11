@@ -1,245 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model kutije</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Model kutije • Milica</title>
+	<style type="text/css">
+		div {
+			height: 200px;
+			width: 50%;
+			background-color: powderblue;
+		}
 
-    <style type="text/css">
-        div {
-            height: 200px;
-            width: 50%;
-            background-color: powderblue;
-        }
-
-        #s1 {
-            /* Svojstva height i width nemaju nikakvog efekta */
-            height: 100px;
-            width: 1000px;
-            background-color: rgb(193, 22, 193);
-        }
-    </style>
-
+		#s1 {
+			/* Svojstva `height` i `width` nemaju nikakvog efekta! */
+			height: 100px;
+			width: 1000px;
+			background-color: rgb(193, 22, 193);
+		}
+	</style>
 </head>
 <body>
+<!--
+HTML elemente moguće je razmatrati kao pravougaonike koji se slažu jedni ispod drugih, odnosno, jedni
+do drugih, u zavisnosti od različitih faktora, kao što je, na primjer, činjenica da je neki element
+blokovski ili linijski. Ovaj koncept ćemo sada detaljnije analizirati kroz pojam modela kutije.
 
-    <!--HTML elemente moguće je razmatrati kao pravougaonike koji se slažu jedni ispod drugih,
-     odnosno, jedni do drugih, u zavisnosti od različitih faktora, kao što je, na primjer, činjenica
-     da je neki element blokovski ili linijski.
-     Ovaj koncept ćemo sada detaljnije analizirati kroz pojam modela kutije.
+Model kutije (engl. `box model`) podrazumijeva da se svaki HTML element prostire odgovarajućom
+dvodimenzionalnom površinom na veb prezentaciji. Veličina ove površine zavisi od četiri veličine,
+koje ujedno čine i model kutije:
 
-Model kutije (engl. box model) podrazumijeva da se svaki HTML element prostire odgovarajućom
-dvodimenzionalnom površinom na veb prezentaciji. 
-Veličina ove površine zavisi od četiri veličine, koje ujedno čine i model kutije:
+1) Sadržaj (engl. `content`) predstavlja površinu u kojoj se prikazuje tekst, slika ili drugi
+   sadržaj HTML elementa.
 
-Sadržaj (engl. content) predstavlja površinu u kojoj se prikazuje tekst, slika ili drugi sadržaj HTML elementa.
+2) Punjenje (engl. `padding`) predstavlja površinu oko sadržaja, ali koje se još uvek smatra
+   “unutrašnošću” elementa. Punjenje je podrazumevano prozirno.
 
-Punjenje (engl. padding) predstavlja površinu oko sadržaja, 
-ali koji se još uvek smatra “unutrašnošću” elementa. Punjenje je podrazumevano prozirno.
+3) Ivica (engl. `border`) predstavlja površinu koja dijeli unutrašnjost elementa od spoljašnjosti,
+   odnosno, od drugih elemenata. Ivica podrazumijevano nije postavljena.
 
-Ivica (engl. border) predstavlja površinu koja dijeli unutrašnjost elementa od spoljašnjosti,
- odnosno, od drugih elemenata. Ivica podrazumijevano nije postavljena.
-
-Pojas (engl. margin) predstavlja površinu oko ivice elementa, koji pre svega
- služi da stvori bezbjedni pojas oko elementa i odvoji ga od okolnih elemenata (otuda i njegov prevod). 
- Pojas je uvijek proziran.
-
+4) Pojas (engl. `margin`) predstavlja površinu oko ivice elementa, koji pre svega služi da stvori
+   bezbjedni pojas oko elementa i odvoji ga od okolnih elemenata (otuda i njegov prevod). Pojas je
+   uvijek proziran.
 -->
-<!--Sadržaj elementa
+<!--
+• Sadržaj elementa (engl. `content`)
+
 Veličina površine koja predstavlja sadržaj elementa zavisi od dvije stvari:
 
-Da li je u pitanju blokovski ili linijski element?
-Koje su vrijednosti CSS svojstava width i height?
+	Da li je u pitanju blokovski ili linijski element?
+	Koje su vrijednosti CSS svojstava `width` i `height`?
 
-Blokovski elementi se podrazumijevano prostiru cijelom širinom roditeljskog elementa
- u čijem se sadržaju nalaze, dok njihovu visinu izračunava veb pregledač na osnovu sadržaja
- u tim elementima. Ovaj, pdorazumijevani efekat, potiče od činjenice da su svakom elementu
-  podrazumijevano postavljena svojstva width i height na vrijednost auto. 
-  Međutim, za blokovske elemente, moguće je podešavati ova svojstva tako da veličina
-   sadržaja bude drugačija. Vrijednosti koje ova dva svojstva uzimaju su dužine.
+$ Blokovski elementi se podrazumijevano prostiru cijelom širinom roditeljskog elementa u čijem se
+sadržaju nalaze, dok njihovu visinu izračunava veb pregledač na osnovu sadržaja u tim elementima.
+Ovaj, podrazumijevani efekat, potiče od činjenice da su svakom elementu podrazumijevano postavljena
+svojstva `width` i `height` na vrijednost `auto`.
 
-Naredni kod ilustruje upotrebu ovih svojstava u promjeni veličine sadržaja
- za blokovski element div. -->
+Međutim, za blokovske elemente, moguće je podešavati ova svojstva, tako da veličina sadržaja bude
+drugačija. Vrijednosti koje ova dva svojstva uzimaju su dužine.
 
- <div>
-    Ovaj div element ima visinu od 200px i sirinu od 50%.
-</div>
+Naredni kôd ilustruje upotrebu ovih svojstava u promjeni veličine sadržaja za blokovski element div:
+-->
+	<div>
+		Ovaj div element ima visinu od 200px i sirinu od 50%.
+	</div>
+<!--
+$ Kada su linijski elementi u pitanju, površina njihovog sadržaja zavisi isključivo od površine
+samog sadržaja koji se prikazuje u okviru njih.
 
-<!--Kada su linijski elementi u pitanju, površina njihovog sadržaja zavisi isključivo od površine
-     samog sadržaja koji se prikazuje u okviru njih. 
-    Na linijske elemente nije moguće uticati svojstvima width i height.
-     Naredni kod ilustruje ovo ponašanje-->
+Na linijske elemente nije moguće uticati svojstvima `width` i `height`! <-- LOOK !!! :eyes:
 
-     <span id="s1">TEST SADRZAJ</span>
-    <span id="s2">TEST SADRZAJ</span>
+Naredni kôd ilustruje ovo ponašanje:
+-->
+	<span id="s1">TEST SADRZAJ</span>
+	<span id="s2">TEST SADRZAJ</span>
 
-    <!--Punjenje elementa
-Punjenje elementa možemo zadati u jeziku CSS pomoću svojstva padding koje istovremeno podešava gornje,
- desno, donje i lijevo punjenje, tim redoslijedom. 
- Međutim, ukoliko želimo da specifikujemo zasebnu veličinu punjenja na nekoj strani,
-  možemo iskoristiti neko od svojstava padding-top, padding-right, padding-bottom ili padding-left.
-   Vrijednosti za sva opisana svojstva su dužine. Podrazumevana vrednost je 0.
+<!--
+• Punjenje elementa (engl. `padding`)
 
-Naredni HTML kod ilustruje postavljanje punjenja za svaku stranu ponaosob.
+Punjenje elementa možemo zadati u jeziku CSS pomoću svojstva `padding` koje istovremeno podešava
+gornje, desno, donje i lijevo punjenje, tim redoslijedom.
 
-<html>
-<head>
-    <title>Punjenje</title>
-    <meta charset="UTF-8">
-    
-    <style type="text/css">
-        div {
-            background-color: lightblue;
-            padding-top: 50px;
-            padding-right: 30px;
-            padding-bottom: 100px;
-            padding-left: 280px;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        Ovaj div element ima gornje punjenje od 50px, desno punjenje od 30px, donje punjenje od 100px i levo punjenje od 280px.
-    </div>
-</body>
-</html>
+Međutim, ukoliko želimo da specifikujemo zasebnu veličinu punjenja na nekoj strani, možemo
+iskoristiti neko od svojstava `padding-top`, `padding-right`, `padding-bottom` ili `padding-left`.
+
+Vrijednosti za sva opisana svojstva su dužine. Podrazumjevana vrijednost je 0.
+
+Naredni HTML kôd ilustruje postavljanje punjenja za svaku stranu ponaosob:
+
+	[pogledaj HTML dokument -> `1a Punjenje.html`] ;-)
 -->
 
-<!--Ivice 
-    1. Stil ivice
+<!--
+• Ivice (engl. `border[s]`)
 
-<html>
+1. Stil ivice                -> `border-style`
+	[pogledaj HTML dokument -> `1b Stil ivice.html`] ;-)
 
-<head>
-    <title>Stil ivice</title>
-    <meta charset="UTF-8">
-
-    <style type="text/css">
-        p {
-            border-width: 10px;
-        }
-
-        p.dotted {
-            border-style: dotted;
-        }
-
-        p.dashed {
-            border-style: dashed;
-        }
-
-        p.solid {
-            border-style: solid;
-        }
-
-        p.double {
-            border-style: double;
-        }
-
-        p.groove {
-            border-style: groove;
-        }
-
-        p.ridge {
-            border-style: ridge;
-        }
-
-        p.inset {
-            border-style: inset;
-        }
-
-        p.outset {
-            border-style: outset;
-        }
-
-        p.none {
-            border-style: none;
-        }
-
-        p.hidden {
-            border-style: hidden;
-        }
-
-        p.mix {
-            border-style: dotted dashed solid double;
-        }
-    </style>
-</head>
-
-<body>
-    <p class="dotted">A dotted border.</p>
-    <p class="dashed">A dashed border.</p>
-    <p class="solid">A solid border.</p>
-    <p class="double">A double border.</p>
-    <p class="groove">A groove border.</p>
-    <p class="ridge">A ridge border.</p>
-    <p class="inset">An inset border.</p>
-    <p class="outset">An outset border.</p>
-    <p class="none">No border.</p>
-    <p class="hidden">A hidden border.</p>
-
-    <p class="mix">A mixed border.</p>
-</body>
-
-</html>
-
-2. Širina ivice
-3. Boja ivice
-4. Navođenje konkretne ivice
-5. Svojstvo border
+2. Širina ivice              -> `border-width`
+3. Boja ivice                -> `border-color`
+4. Navođenje konkretne ivice -> `border-top`, `border-right`, `border-bottom`, `border-left`
+5. Svojstvo `border` <-- 4 u 1: `border-top`, `border-right`, `border-bottom`, `border-left` √
 
 Pogledati na adresi:
 https://matfuvit.github.io/UVIT/vezbe/knjiga/Poglavlja/CSS/
 -->
-<!--Pojas elementa
 
-<html>
+<!--
+• Pojas elementa (engl. `margin`)
 
-<head>
-    <title>Pojas</title>
-    <meta charset="UTF-8">
-
-    <style>
-        div {
-            border: black solid 1px;
-        }
-
-        p {
-            border: 1px solid black;
-            margin-top: 100px;
-            margin-bottom: 100px;
-            margin-right: 20%;
-            margin-left: 20%;
-            background-color: lightblue;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div>
-        <p>
-            Ovaj element ima gornju marginu od 100px,
-            desnu marginu od 20%, donju marginu od 100px
-            i levu marginu od 20%.
-        </p>
-    </div>
-
-</body>
-
-</html>
+	[pogledaj HTML dokument -> `1c Pojas.html`] ;-)
 
 Za domaći
 1. Horizontalno poravnanje elemenata pomoću svojstva margin
 2. Linijski elementi i svojstvo margin
 3. Uopšteno o CSS modelu kutije
- https://internetingishard.com/html-and-css/css-box-model/
+   https://internetingishard.com/html-and-css/css-box-model/
 
 Detaljniji opis svih modela kutija (u HTML i u CSS jezicima):
- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
- 
--->
-
-    
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+-->	
 </body>
 </html>
