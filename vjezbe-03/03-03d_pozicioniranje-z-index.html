@@ -4,21 +4,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>fixed | Pozicioniranje elemenata</title>
+	<title>`z-index` / `fixed` | Pozicioniranje elemenata</title>
 	<style>
 		body {
 			height: 1000px;
 		}
 
 		#omotac {
-			position: relative;/* predak nije vise statican! */
+			position: relative; /* predak nije vise statican! */
 			margin-top: 100px;
 			height: 400px;
 			width: 400px;
 			background-color: rgba(218, 165, 32, 0.5);
 		}
 
-		#prvi { /* nema position svojstvo, pa je statican! */
+		#prvi { /* nema `position` svojstvo, pa je statican! */
 			height: 100px;
 			width: 300px;
 			background-color: rgb(231, 43, 102);
@@ -29,10 +29,11 @@
 			width: 300px;
 			background-color: rgb(24, 243, 232);
 			position: relative;
+			/*position: fixed;*/
 			top: 30px;
 			left: 80px;
-			/*z-index: -5;*/
-            z-index: 5; /* z index veci, ispred se nalai */
+			z-index: -5;/* z index manji, ispod/iza se nalazi! */
+            /*z-index: 5;*/ /* z index veci, ispred se nalazi! */
 		}
 
 		#treci {
