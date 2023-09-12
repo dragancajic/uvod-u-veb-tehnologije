@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pozadina elementa</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pozadina elementa • Milica</title>
+	<style type='text/css'>
+		#test_div {
+			height: 600px;
+			width: 900px;
 
-    <style type='text/css'>
-        #test_div {
-            height: 600px;
-            width: 900px;
+			background-image: url('slike/grad.jpg');
+		}
 
-            background-image: url('slike/grad.jpg');
-        }
+		#test_div p {
+			color: white;
+			text-align: center;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-size: 50px;
+			margin: 0px;
+			padding-top: 1cm;
+		}
 
-        #test_div p {
-            color: white;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 50px;
-            margin: 0px;
-            padding-top: 1cm;
-        }
+		#bg-1,
+		#bg-2 {
+			display: inline-block;
+			width: 40%;
+			height: 250px;
+			border: 1px solid black;
+			background-image: url("slike/gradient_bg.jpg");
+		}
 
-        
-        #bg-1,
-        #bg-2 {
-            display: inline-block;
-            width: 40%;
-            height: 250px;
-            border: 1px solid black;
-            background-image: url("slike/gradient_bg.jpg");
-        }
+		#bg-1 {
+			/* Podrazumijevano ponašanje */
+			background-repeat: repeat;
+		}
 
-        #bg-1 {
-            /* Podrazumevano ponašanje */
-            background-repeat: repeat;
-        }
-
-        #bg-2 {
-            /* Ponavljanje samo po x-osi */
-            background-repeat: repeat-x;
-        }
-    
-    </style>
-
+		#bg-2 {
+			/* Ponavljanje samo po x-osi */
+			background-repeat: repeat-x;
+		}
+	</style>
 </head>
 <body>
-    <!--Korišćenjem jezika CSS možemo podesiti pozadinu elemenata na dva načina:
+	<!--Korišćenjem jezika CSS možemo podesiti pozadinu elemenata na dva načina:
 
-    * Postavljanjem slike za pozadinu
+	* Postavljanjem slike za pozadinu
 
-    * Postavljanjem gradijentne pozadine 
-    -->
+	* Postavljanjem gradijentne pozadine
+	-->
 
-    <!--Slika kao pozadina-->
+	<!--Slika kao pozadina-->
 
-    <div id='test_div'>
-        <p>Slika kao pozadina</p>
-    </div>
+	<div id='test_div'>
+		<p>Slika kao pozadina</p>
+	</div>
+	<!--
+	Podrazumijevano, pozadina se ponavlja horizontalno (tj. po x-osi) i vertikalno (tj. po y-osi),
+	što je najjednostavnije vidjeti ukoliko su dimenzije unutrašnjosti elementa veće od dimenzije
+	slike koja se koristi kao pozadina.
+	
+	CSS svojstvo `background−repeat` se koristi za kontrolisanje ponavljanja.
+	Ovo svojstvo može uzimati jednu od narednih vrijednosti:
 
+	Vrijednost `repeat`
+	predstavlja već opisano podrazumijevano ponašanje u kojem se pozadina ponavlja po x i y osama.
 
-    <!--Podrazumijevano, pozadina se ponavlja horizontalno (tj. po x-osi) i vertikalno
-         (tj. po y-osi), što je najjednostavnije vidjeti ukoliko su dimenzije unutrašnjosti
-         elementa veće od dimenzije slike koja se koristi kao pozadina.
-         CSS svojstvo background−repeat se koristi za kontrolisanje ponavljanja. 
-         Ovo svojstvo može uzimati jednu od narednih vrijednosti:
+	Vrijednost `repeat-x`
+	predstavlja ponašanje da se pozadina ponavlja samo po horizontalnoj osi.
 
-Vrijednost repeat 
-predstavlja već opisano podrazumijevano ponašanje u kojem se pozadina ponavlja po x i y osama.
+	Vrijednost `repeat-y`
+	predstavlja ponašanje da se pozadina ponavlja samo po vertikalnoj osi.
 
-Vrijednost repeat-x
-predstavlja da se pozadina ponavlja samo po horizontalnoj osi.
+	Vrijednost `no-repeat`
+	predstavlja ponašanje da se pozadina ne ponavlja ni po jednoj osi.
+	-->
 
-Vrijednost repeat-y
-predstavlja da se pozadina ponavlja samo po vertikalnoj osi.
+	<!--Primjer-->
 
-Vrijednost no-repeat
-predstavlja da se pozadina ne ponavlja ni po jednoj osi.-->
-
-<!--Primjer
-
-
--->
-
-<div id="bg-1">background-repeat: repeat;</div>
-<div id="bg-2">background-repeat: repeat-x;</div>
-
+	<div id="bg-1">background-repeat: repeat;</div>
+	<div id="bg-2">background-repeat: repeat-x;</div>
 </body>
 </html>
