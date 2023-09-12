@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Navigation Bars</title>
-    <style>
-        li {
-            list-style-type: none;
-            display: inline;
-            padding: 15px;
-            margin: 25px;
-            border: 2px solid pink;
-        }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Navigation Bars</title>
+	<style>
+		li {
+			list-style-type: none;
+			display: inline;
+			padding: 15px;
+			margin: 25px;
+			border: 2px solid pink;
+		}
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-        }
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			border: 2px solid limegreen;
+			padding: 10px;
+			margin: 5px;
+			background-color: antiquewhite;
+		}
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
+		.dropdown-content > li {
+			display: block;
+			
+		}
+
+		.dropdown:hover, .dropdown-content {
+			display: inline-block;
+			background-color: lightgreen;
+		}
+	</style>
 </head>
 <body>
-    <ul>
-        <li class="dropdown"><a href="#">HOME</a></li> |
-        <li><a href="#">SERVICES</a></li> |
-        <li>about</li> |
-        <li>blog</li> |
-        <li>contact</li>
-    </ul>
-    <p class="dropdown-content">You can't hide! I will find you!!! :-)</p>
+	<ul>
+		<li><a href="#">HOME</a></li> |
+		<li class="dropdown"><a href="#">SERVICES</a></li> |
+		<ul class="dropdown-content">
+			<li>Software</li>
+			<li>Hardware</li>
+			<li>Support</li>
+		</ul>
+		<li>about</li> |
+		<li>blog</li> |
+		<li>contact</li>
+	</ul>
+	<p class="dropdown-content">You can't hide! I will find you!!! :-)</p>
 </body>
 </html>
