@@ -1,0 +1,99 @@
+/* kaskadni stilovi dizajna HTML stranice */
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#omotac {
+	margin: auto;
+}
+
+nav {
+	display: inline;
+}
+
+nav > ul > li > a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	margin: 5px;
+}
+
+#naslovi {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#prvi-naslov {
+	color: rgb(33, 180, 230);
+	font-size: 30pt;
+}
+
+#drugi-naslov {
+	color: white;
+	font-size: 50pt;
+}
+
+#buttons {
+	text-align: center;
+}
+
+#ad-button {
+	padding: 10px;
+	margin: 20px;
+	border-radius: 30px;
+	border: none;
+	width: 15%;
+	height: auto;
+}
+
+#ad-button:hover {
+	background-color: rgb(33, 180, 230);
+	color: white;
+}
+
+nav > ul > li > a:hover, .selected {
+	border-radius: 10px;
+	background-color: rgb(33, 180, 230);
+}
+
+header {
+	background-image: url(../img/banner2.jpg);
+	height: fit-content;
+}
+
+section {
+	width: 40%;
+}
+
+section > h1 {
+	font-weight: 500;
+	font-size: xx-large;
+}
+
+#read-more {
+	padding: 10px;
+	margin: 20px;
+	border-radius: 20px;
+	border: none;
+	width: 120px;
+	height: auto;
+	color: white;
+	background-color: black;
+}
+
+#read-more:hover {
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+}
+
+#slika-desno {
+	width: auto;
+	float: right;
+}
+
+ul > li {
+	list-style: none;
+	display: contents;
+}
