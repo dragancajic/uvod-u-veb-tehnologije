@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.meni {
+            background-color: #f3f3f3;
+            width: 800px;
+            padding-left: 0px;
+            border: 1px solid #ddd;
+        }
+        
+        ul.meni,
+        ul.meni>li,
+        ul.meni>li>a {
+            display: inline-block;
+            /*
+            float: left;
+            display: block;
+            */
+        }
+        
+        ul.meni>li>a {
+            background-color: #f3f3f3;
+            padding: 12px;
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        ul>li>a:hover {
+            background-color: #ccc;
+        }
+        
+        ul>li>a.active {
+            background-color: #008cba;
+            color: #fff;
+        }
+        
+        .float-right {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="meni">
+        <li><a class="active" href="zadatak 1.html">Pocetna</a></li>
+        <li><a href="https://www.pmf.unibl.org">Matematika i informatika</a></li>
+        <li><a href="https://classroom.google.com/c/NjI3MDc3NzYxMzU1?cjc=u4mfxm6">Google učionica</a></li>
+        <li class="float-right"><a href="mailto:milan.predojevic@pmf.unibl.org">Kontakt</a></li>
+    </ul>
+</body>
+
+</html>
