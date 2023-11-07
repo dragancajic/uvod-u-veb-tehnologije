@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.container {
+    margin: 0 13%;
+}
+
+.kontakt {
+    background-color: #49688E;
+    margin: 0;
+    padding: 7px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.kontakt a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.kontakt .fa {
+    color: #FFAB1F;
+}
+
+.logo img {
+    width: 100px;
+    margin: 20px;
+}
+
+.logo h1 {
+    margin-top: 45px;
+    margin-bottom: 5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #294A70;
+}
+
+.logo p {
+    margin-top: 0;
+    color: #666;
+}
+
+.text-logo {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.meni {
+    background-color: #294A70;
+    border-bottom: 5px solid #F4A024;
+    height: 45px;
+}
+
+.meni ul,
+.meni li {
+    display: block;
+}
+
+.meni li {
+    float: left;
+}
+
+.meni a {
+    color: #fff;
+    padding: 13px;
+    height: 19px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.meni a:hover {
+    background-color: #F4A024;
+}
+
+.studije {
+    background-color: #eee;
+}
+
+.studije h2 {
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 21px;
+}
+
+.studije .row {
+    display: flex;
+}
+
+.studije .item {
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    flex-basis: -moz-available;
+}
+
+.studije .item p {
+    color: #fff;
+    font-size: 12px;
+}
+
+.studije .item h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.studije .item a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.studije .item a:hover {
+    background-color: #fff;
+    color: #555;
+    transition: 1s;
+}
+
+.crvena {
+    background-color: #D75949;
+}
+
+.plava {
+    background-color: #00979E;
+}
+
+.zuta {
+    background-color: #B7C904;
+}

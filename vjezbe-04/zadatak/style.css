@@ -1,0 +1,152 @@
+body { /* svim elementima -- asterisk, ili body */
+	margin: 0;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	/*
+	https://fontawesome.com/v4/icons/
+	https://fontawesome.com/v4/get-started/
+	https://fontawesome.com/v4/examples/
+	*/
+}
+
+.container {
+	margin: 0 13%;
+}
+
+.kontakt {
+	background-color: #49688E;
+	padding: 7px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 900;
+}
+
+.kontakt a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.kontakt .fa {
+	color: #fff;
+}
+
+.logo img {
+	width: 100px;
+	margin: 20px;
+}
+
+.tekst-logo {
+	display: inline-block;
+	vertical-align: top; /* MNOGO VAZNO, pozicioniranje slike/logo i teksta! */
+	margin: 20px;
+}
+
+.logo h1 {
+	margin-top: 45px;
+	margin-bottom: 5px;
+}
+
+.logo a {
+	text-decoration: none;
+	color: #294a70;
+}
+
+.logo p {
+	margin-top: 0px;
+	color: #666;
+}
+
+.meni {
+	background-color: #294a70;
+	border-bottom: 5px solid #f4a024;
+	height: 45px;
+}
+
+.meni ul,
+.meni li {
+	display: inline-block;
+}
+
+.meni li {
+	float: left; /* plivanje u odnosu na tekst */
+}
+
+.meni a {
+	color: #fff;
+	padding: 13px;
+	padding: 19px;
+	text-decoration: none;
+	display: inline-block;
+	height: 14px;
+}
+
+.meni a:hover {
+	background-color: #f4a024;
+}
+
+.studije {
+	background-color: #eee;
+}
+
+.studije h2 {
+	margin-top: 0;
+	padding-top: 20px;
+	text-align: center;
+	color: #555;
+	font-size: 21px;
+}
+
+/* css-trics -> flex properties -> link naci! */
+
+.studije .row {
+	display: flex;
+}
+
+.studije .item {
+	text-align: left;
+	margin: 5px;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.studije .item p {
+	font-size: 12px;
+}
+
+/* flex -> elementi se redaju slijeva nadesno i zauzimaju onoliko prostora koliko im treba! */
+
+.zuta {
+	background-color: #87c904;
+}
+
+.crvena {
+	background-color: #b75;
+}
+
+.plava {
+	background-color: #00979d;
+}
+
+.studije .item h3 {
+	text-transform: uppercase;
+}
+
+.studije .item a {
+	color: #fff;
+	
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.studije .row {
+	justify-content: center;
+}
+
+.studije .item a:hover {
+	background-color: #fff;
+	color: #000;
+	transition: 1s;
+}
