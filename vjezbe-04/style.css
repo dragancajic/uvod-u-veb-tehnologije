@@ -101,15 +101,15 @@ body {
     flex-basis: -moz-available;
 }
 
-.studije .item p {
-    color: #fff;
-    font-size: 12px;
-}
-
 .studije .item h3 {
     color: #fff;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.studije .item p {
+    color: #fff;
+    font-size: 12px;
 }
 
 .studije .item a {
@@ -128,14 +128,14 @@ body {
     transition: 1s;
 }
 
+.zuta {
+    background-color: #B7C904;
+}
+
 .crvena {
     background-color: #D75949;
 }
 
 .plava {
     background-color: #00979E;
-}
-
-.zuta {
-    background-color: #B7C904;
 }

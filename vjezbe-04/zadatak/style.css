@@ -1,7 +1,7 @@
 body { /* svim elementima -- asterisk, ili body */
 	margin: 0;
 	padding: 0;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Merriweather Sans", sans-serif;
 	/*
 	https://fontawesome.com/v4/icons/
 	https://fontawesome.com/v4/get-started/
@@ -15,10 +15,11 @@ body { /* svim elementima -- asterisk, ili body */
 
 .kontakt {
 	background-color: #49688E;
+	margin: 0;
 	padding: 7px;
 	color: #fff;
 	font-size: 14px;
-	font-weight: 900;
+	font-weight: 500;
 }
 
 .kontakt a {
@@ -27,17 +28,11 @@ body { /* svim elementima -- asterisk, ili body */
 }
 
 .kontakt .fa {
-	color: #fff;
+	color: #ffab1f;
 }
 
 .logo img {
 	width: 100px;
-	margin: 20px;
-}
-
-.tekst-logo {
-	display: inline-block;
-	vertical-align: top; /* MNOGO VAZNO, pozicioniranje slike/logo i teksta! */
 	margin: 20px;
 }
 
@@ -56,6 +51,11 @@ body { /* svim elementima -- asterisk, ili body */
 	color: #666;
 }
 
+.tekst-logo {
+	display: inline-block;
+	vertical-align: top; /* MNOGO VAZNO, pozicioniranje slike/logo-a i teksta! */
+}
+
 .meni {
 	background-color: #294a70;
 	border-bottom: 5px solid #f4a024;
@@ -64,7 +64,7 @@ body { /* svim elementima -- asterisk, ili body */
 
 .meni ul,
 .meni li {
-	display: inline-block;
+	display: block; /* Try removing `float` or adding `display:block`. */
 }
 
 .meni li {
@@ -74,10 +74,9 @@ body { /* svim elementima -- asterisk, ili body */
 .meni a {
 	color: #fff;
 	padding: 13px;
-	padding: 19px;
+	height: 19px;
 	text-decoration: none;
 	display: inline-block;
-	height: 14px;
 }
 
 .meni a:hover {
@@ -96,44 +95,35 @@ body { /* svim elementima -- asterisk, ili body */
 	font-size: 21px;
 }
 
-/* css-trics -> flex properties -> link naci! */
+/* css-tricks -> flex properties -> link naci! */
 
 .studije .row {
 	display: flex;
 }
 
 .studije .item {
-	text-align: left;
 	margin: 5px;
 	padding: 20px;
 	border-radius: 5px;
-}
-
-.studije .item p {
-	font-size: 12px;
+	flex-basis: -moz-available;
 }
 
 /* flex -> elementi se redaju slijeva nadesno i zauzimaju onoliko prostora koliko im treba! */
 
-.zuta {
-	background-color: #87c904;
-}
-
-.crvena {
-	background-color: #b75;
-}
-
-.plava {
-	background-color: #00979d;
-}
-
 .studije .item h3 {
+	color: #fff;
 	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.studije .item p {
+	color: #fff;
+	font-size: 12px;
 }
 
 .studije .item a {
 	color: #fff;
-	
+	display: block;
 	text-align: center;
 	text-decoration: none;
 	border: 1px solid #fff;
@@ -141,12 +131,20 @@ body { /* svim elementima -- asterisk, ili body */
 	padding: 10px;
 }
 
-.studije .row {
-	justify-content: center;
-}
-
 .studije .item a:hover {
 	background-color: #fff;
-	color: #000;
+	color: #555;
 	transition: 1s;
+}
+
+.zuta {
+	background-color: #b7c904;
+}
+
+.crvena {
+	background-color: #d75949;
+}
+
+.plava {
+	background-color: #00979e;
 }
