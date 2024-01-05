@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ниске карактера (стрингови)</title>
+</head>
+<body>
+
+    <script>
+        var x = 'A onda je rekao: "Uradicu to!"';
+        x = "A onda je rekao: \"Uradicu to!\"";
+        var y = "Ali to nije uradio! >:(";
+        console.log(x);
+        console.log(x + "\n" + y);
+
+        var z = x + "\n" + y;
+/*
+A onda je rekao: "Uradicu to!" -> 30
+\n                             ->  1
+Ali to nije uradio! >:(        -> 23
+*/
+        console.log(z.length); // broji karaktere unutar stringa, нпр. 54 = 30 + 1 + 23
+        console.log(z.indexOf("re"));     // индекс првог појављивања:     10
+        console.log(z.lastIndexOf("re")); // индекс посљедњег појављивања: 10
+        console.log(z.toUpperCase());
+        console.log(z.toLowerCase());
+        if (z.indexOf("Ali") != -1)
+            z = z.replace("Ali", "I");
+
+        console.log(z);
+    </script>
+</body>
+</html>

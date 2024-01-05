@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Низови</title>
+</head>
+<body>
+    <script>
+        var niz = [4, 45, "ja", "mi", 5];
+
+        console.log(niz[0]); // 4
+        niz[2] = 81;
+        niz[10] = "Banja Luka"; // 11-ti елемент
+        niz.push(58);           // 12-ti елемент
+        niz.pop(); // 12 - 1 = 11 елемената у низу
+        niz.pop(); // 11 - 1 = 10 елемената у низу
+        niz.pop(); // 10 - 1 =  9 елемената у низу
+        console.log(niz[10]); // undefined <-- не постоји више!
+        console.log(niz); // Array(9) [ 4, 45, 81, "mi", 5, <4 empty slots> ]
+        console.log(niz[9]); // undefined <-- не постоји више!
+        console.log(niz[8]); // undefined <-- празан слот / празно мјесто (позиција)!
+
+        for (var i = 0; i < niz.length; i++)
+            if (niz[i] != undefined)
+                console.log(niz[i]);
+
+        nukleobaze = ['a', 'c', 'a', 't', 't', 'g', 't'];
+        sekvenca = nukleobaze.join(" ");
+        console.log("DNK:", sekvenca, "|", typeof(sekvenca)); // DNK: a c a t t g t | string
+
+        var t = [8, 8, 7, 2, 5, 8, 2, 7, 8];
+
+        let trazeni = t[0];
+        for (let i = 1; i < t.length; i++) {
+            trazeni ^= t[i];
+            console.log("trazeni XOR t[i] =", trazeni);
+        }
+        /*
+            1000 [8]  XOR 1000 [8] = 0000 [0]
+            0000 [0]  XOR 0111 [7] = 0111 [7]
+            0111 [7]  XOR 0010 [2] = 0101 [5]
+            0101 [5]  XOR 0101 [5] = 0000 [0]
+            0000 [0]  XOR 1000 [8] = 1000 [8]
+            1000 [8]  XOR 0010 [2] = 1010 [10]
+            1010 [10] XOR 0111 [7] = 1101 [13]
+            1101 [13] XOR 1000 [8] = 0101 [5] √
+        */
+        console.log(trazeni); // 5
+    </script>
+</body>
+</html>

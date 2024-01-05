@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерисање бројева</title>
+</head>
+
+<body>
+    <script>
+        // Math.random() <-- Returns a pseudorandom number between 0 and 1.
+        var sb = Math.random();                           // [0.0, 1.0)
+        console.log(sb); // нпр. 0.0423054965739853, 0.5734329081434654 или 0.997768865151375
+
+        sb = Number.parseInt(Math.random() * 50.1);       // [0, 50]
+        console.log(sb); // нпр. 48, 23, 8, 1, 0 <-- numbers
+
+        sb = Number.parseInt(Math.random() * 50.1) + 50;  // [50, 100]
+        console.log(sb); // нпр. 94, 65, 80, 97, 56
+
+        sb = Number.parseInt(Math.random() * 100.1) - 50; // [-50, 50]
+        console.log(sb); // нпр. -7, 22, -20, 47, 50, -50
+    </script>
+</body>
+
+</html>

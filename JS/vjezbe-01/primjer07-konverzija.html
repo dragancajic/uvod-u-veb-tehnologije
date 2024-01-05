@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конверзија типова</title>
+</head>
+
+<body>
+
+    <script>
+        // ovo je komentar u jednoj linji
+
+        /*
+        ovo je komentar
+        u vise lija
+         */
+
+        var x = '4.2';
+        var y = 5;
+
+        // имплицитна конверзија <-- ОПРЕЗ!
+        console.log(x + y, typeof(x + y)); // 4.25 string <------------- | string + number = string
+        console.log(x - y, typeof(x - y)); // -0.7999999999999998 number | string - number = number
+
+        // експлицитна конверзија √ <-- string у цијели број (number)
+        console.log(Number.parseInt(x) + y, typeof(Number.parseInt(x) + y)); // 9 number √ У РЕДУ!
+    </script>
+</body>
+
+</html>
