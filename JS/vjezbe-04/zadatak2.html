@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-O Igra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #velicinaTable {
+            width: 40px;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        
+        #tabla {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;  /* мало простора за дисање додај! ;-)   √ */
+            padding-top: 15px; /* мало простора за дисање додај! ;-)   √ */
+        }
+        
+        #tabla table {
+            border: 1px solid #555;
+            border-collapse: collapse;
+        }
+        
+        #tabla td {
+            width: 50px;
+            height: 50px;
+            font-size: 28px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #555;
+        }
+        
+        #rezultat {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>X-O Igra</h1>
+    <label for="velicinaTable">Veličina tabele: </label>
+
+    <!-- ограничи максималну вриједност величине табеле на 7 x 7 :o) -->
+    <input type="number" id="velicinaTable" min="3" value="6" max="7">
+    <button onclick="startujIgru()">Započni igru</button>
+    <div id="tabla">
+        <table>
+            <!-- tbody će biti dodat dinamički -->
+        </table>
+    </div>
+    <div id="rezultat"></div>
+
+    <script src="xo.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vješala</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #tajnaRec {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        #greske {
+            color: red;
+        }
+        
+        #brojGresaka {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vješala</h1>
+    <div id="tajnaRec"></div>
+    <p id="greske">Broj grešaka: <span id="brojGresaka">0</span></p>
+    <label for="unosSlova">Unesite slovo: </label>
+    <input type="text" id="unosSlova" maxlength="1">
+    <button id="pogodiSlovo">Pogodi</button>
+
+    <script src="zadatak1.js"></script>
+</body>
+</html>
